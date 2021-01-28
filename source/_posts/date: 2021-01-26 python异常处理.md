@@ -1,0 +1,48 @@
+# 异常
+标签：\#python \#异常处理 \#with语句
+## 一、异常处理
+python有一套`try...except...finally...`机制来处理异常
+
+### 1、try...except...finally...
+
+
+try机制用法如下：
+
+```
+try:
+    x = int(input("Please enter a number: "))
+    break
+except ValueError:
+    print("Oops!  That was no valid number.  Try again...")
+```
+finally子句是可选的，目的在于定义在任何情况下都一定要执行的功能。
+```
+try:
+    x = open("/home/a.txt", "r")
+    print(x.read())
+    
+finnaly:
+    if x:
+        x.close()
+```
+不管有没有发生异常，finally 子句 在程序离开 try 后都一定会被执行。当 try 语句中发生了未被 except 捕获的异常（或者它发生在 except 或 else 子句中），在 finally 子句执行完后它会被重新抛出。
+
+***在真实场景的应用程序中，finally 子句用于释放外部资源（文件或网络连接之类的），无论它们的使用过程中是否出错。***
+
+### 2、抛出异常
+使用`raise`关键字可以抛出一个异常（异常也是类）。例如：
+```
+>>> raise ValueError("A value error occured.")
+Traceback (most recent call last):
+File "<stdin>", line 1, in <module>
+ValueError: A value error occured.
+```
+同样，我们也可以用`try`语句捕捉我们自己抛出的异常：
+```
+>>> try:
+...     raise ValueError("A value error happened.")
+... except ValueError:
+...     print("ValueError in our code.")
+...
+ValueError in our code.
+```

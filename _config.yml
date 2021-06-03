@@ -103,4 +103,8 @@ theme: fluid
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
+  type: rsync
+  host: 107.173.159.50
+  user: max
+  root: /home/max/deploy/max_blog/public
+  port: 22

@@ -108,3 +108,11 @@ deploy:
   user: max
   root: /home/max/deploy/max_blog/public
   port: 22
+
+
+# sitemap
+sitemap:
+  path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml
+    

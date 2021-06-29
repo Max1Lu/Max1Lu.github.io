@@ -929,3 +929,7 @@ static_prefix:
   twikoo: https://cdn.jsdelivr.net/npm/twikoo@0.1.15/dist/
 
   hint: /lib/hint/
+
+
+# 百度sitemap
+baidu_push: true
